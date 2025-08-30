@@ -2,10 +2,11 @@
 ---
 function initSearch() {
   var input = document.getElementById('search-input');
+  var results = document.getElementById('search-results');
+  if (!input || !results) return;
   var button = document.getElementById('search-button');
   var results = document.getElementById('search-results');
   if (!input || !button || !results) return;
-
   var indexData = [];
   fetch('{{ "/search.json" | relative_url }}')
     .then(function(res) { return res.json(); })
@@ -29,6 +30,7 @@ function initSearch() {
     });
   }
 
+  input.addEventListener('input', search);
   button.addEventListener('click', search);
   input.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {

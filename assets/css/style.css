@@ -28,6 +28,7 @@ a:hover {
   color: #0f0;
 }
 
+.search-bar input:focus {
 .search-bar button {
   background: transparent;
   border: 1px solid #0f0;
