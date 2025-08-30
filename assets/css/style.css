@@ -36,6 +36,11 @@ a:hover {
   margin-left: 0.5rem;
 }
 
+.search-bar input:focus,
+.search-bar button:focus {
+  outline: none;
+}
+
 #search-results div {
   margin-top: 0.5rem;
 }
