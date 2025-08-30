@@ -17,6 +17,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
 .search-bar input {
   background: transparent;
   border: none;
@@ -29,6 +34,16 @@ a:hover {
 }
 
 .search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  cursor: pointer;
+}
+
 .search-bar button {
   background: transparent;
   border: 1px solid #0f0;
