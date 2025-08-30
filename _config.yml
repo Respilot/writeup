@@ -1,0 +1,7 @@
+title: Portfolio
+description: "Portfolio and CTF write-ups"
+markdown: kramdown
+theme: null
+collections:
+  writeups:
+    output: true
