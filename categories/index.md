@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Writeups
+title: Categories
 ---
 
-# Writeups
+# Categories
 
 {% assign categories = site.writeups | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
 {% for category in categories %}
