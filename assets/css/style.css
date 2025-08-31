@@ -37,6 +37,7 @@ a:hover {
   outline: none;
 }
 
+
 .search-bar input:focus,
 
 #search-results div {
@@ -48,6 +49,15 @@ a:hover {
   border: none;
   color: #0f0;
   cursor: pointer;
+}
+
+.search-bar button:focus {
+  outline: none;
+}
+
+#search-results div {
+  margin-top: 0.5rem;
+}
   margin-left: 0.5rem;
 }
 
