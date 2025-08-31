@@ -37,6 +37,13 @@ a:hover {
   outline: none;
 }
 
+
+.search-bar input:focus,
+
+#search-results div {
+  margin-top: 0.5rem;
+}
+
 .search-bar button {
   background: transparent;
   border: none;
@@ -51,3 +58,10 @@ a:hover {
 #search-results div {
   margin-top: 0.5rem;
 }
+  margin-left: 0.5rem;
+}
+
+.search-bar button:focus {
+  outline: none;   /* removes the green outline */
+}
+
