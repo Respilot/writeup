@@ -58,6 +58,29 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+pre {
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #ff0;
+}
+
+code {
+  color: #ff0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  cursor: pointer;
+}
+
+.copy-btn:focus {
+  outline: none;
 pre, code {
   color: #ff0;
 }
