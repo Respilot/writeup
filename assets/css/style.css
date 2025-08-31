@@ -16,3 +16,42 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #0f0;
+  color: #0f0;
+}
+
+.search-bar input::placeholder {
+  color: #0f0;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  cursor: pointer;
+}
+
+.search-bar button:focus {
+  outline: none;
+}
+
+#search-results div {
+  margin-top: 0.5rem;
+}
+
+pre, code {
+  color: #ff0;
+}
