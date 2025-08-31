@@ -24,6 +24,7 @@ ffuf -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.t
 ```
 
 This reveals [git.sorcery.htb](https://git.sorcery.htb); add it to `/etc/hosts` and create an account on the site, then log in.
+This reveals `git.sorcery.htb`; add it to `/etc/hosts` and create an account on the site, then log in.
 
 Capture traffic with a rogue host and `mitmproxy`:
 
