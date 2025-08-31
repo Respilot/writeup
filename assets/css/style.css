@@ -1,75 +1,102 @@
-diff --git a/assets/css/style.css b/assets/css/style.css
-index 3e67d12e924bac36aa893dab6f6d56e933e49921..13d40636e4d5694fd4fd53880cb197a55138415d 100644
---- a/assets/css/style.css
-+++ b/assets/css/style.css
-@@ -41,62 +41,59 @@ a:hover {
- .search-bar input:focus,
- 
- #search-results div {
-   margin-top: 0.5rem;
- }
- 
- .search-bar button {
-   background: transparent;
-   border: none;
-   color: #0f0;
-   cursor: pointer;
- }
- 
- .search-bar button:focus {
-   outline: none;
- }
- 
- #search-results div {
-   margin-top: 0.5rem;
- }
- 
- pre {
-   position: relative;
-   white-space: pre-wrap;
-   word-break: break-word;
--  color: #ff0;
-   background: #111;
-   border: 1px solid #0f0;
-   border-radius: 4px;
--
-   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-+  margin-left: 0.5rem;
-+  color: #ff0;
-+}
-+
-+pre code {
-+  color: inherit;
- }
- 
- code {
--  color: #ff0;
-+  color: #0f0;
- }
- 
- .copy-btn {
-   position: absolute;
-   top: 0.25rem;
-   right: 0.25rem;
--  background: #111;
--  border: 1px solid #0f0;
--  color: #0f0;
--  border-radius: 4px;
-   background: transparent;
-   border: 1px solid #0f0;
-   color: #0f0;
-+  border-radius: 4px;
-   cursor: pointer;
- }
- 
- .copy-btn:focus {
-   outline: none;
--pre, code {
--  color: #ff0;
--}
--  margin-left: 0.5rem;
- }
- 
- .search-bar button:focus {
-   outline: none;   /* removes the green outline */
- }
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  margin: 2rem;
+}
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+a {
+  color: #0ff;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #0f0;
+  color: #0f0;
+}
+
+.search-bar input::placeholder {
+  color: #0f0;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+
+.search-bar input:focus,
+
+#search-results div {
+  margin-top: 0.5rem;
+}
+
+.search-bar button {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  cursor: pointer;
+}
+
+.search-bar button:focus {
+  outline: none;
+}
+
+#search-results div {
+  margin-top: 0.5rem;
+}
+
+pre {
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #ff0;
+  background: #111;
+  border: 1px solid #0f0;
+  border-radius: 4px;
+
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+}
+
+code {
+  color: #ff0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background: #111;
+  border: 1px solid #0f0;
+  color: #0f0;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  cursor: pointer;
+}
+
+.copy-btn:focus {
+  outline: none;
+pre, code {
+  color: #ff0;
+}
+  margin-left: 0.5rem;
+}
+
+.search-bar button:focus {
+  outline: none;   /* removes the green outline */
+}
