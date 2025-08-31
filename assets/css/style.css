@@ -37,6 +37,7 @@ a:hover {
   outline: none;
 }
 
+
 .search-bar input:focus,
 
 #search-results div {
@@ -63,6 +64,10 @@ pre {
   white-space: pre-wrap;
   word-break: break-word;
   color: #ff0;
+  background: #111;
+  border: 1px solid #0f0;
+  border-radius: 4px;
+
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
 }
 
@@ -74,6 +79,10 @@ code {
   position: absolute;
   top: 0.25rem;
   right: 0.25rem;
+  background: #111;
+  border: 1px solid #0f0;
+  color: #0f0;
+  border-radius: 4px;
   background: transparent;
   border: 1px solid #0f0;
   color: #0f0;
