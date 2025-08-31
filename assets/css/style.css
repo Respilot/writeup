@@ -37,6 +37,13 @@ a:hover {
   outline: none;
 }
 
+
+.search-bar input:focus,
+
+#search-results div {
+  margin-top: 0.5rem;
+}
+
 .search-bar button {
   background: transparent;
   border: none;
@@ -60,6 +67,7 @@ pre {
   background: #111;
   border: 1px solid #0f0;
   border-radius: 4px;
+
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
 }
 
@@ -75,9 +83,20 @@ code {
   border: 1px solid #0f0;
   color: #0f0;
   border-radius: 4px;
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
   cursor: pointer;
 }
 
 .copy-btn:focus {
   outline: none;
+pre, code {
+  color: #ff0;
+}
+  margin-left: 0.5rem;
+}
+
+.search-bar button:focus {
+  outline: none;   /* removes the green outline */
 }
