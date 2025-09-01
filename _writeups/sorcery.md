@@ -15,7 +15,35 @@ Visit [https://sorcery.htb](https://sorcery.htb) and enumerate the repository:
 
 Enumerate virtual hosts with `ffuf`:
 
-<pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffd700">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200</span></code></pre>
+<pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffd700">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200
+
+<h2>ffuf scan results</h2>
+<pre>
+/'___\  /'___\           /'___\       
+/\ \__/ /\ \__/  __  __  /\ \__/       
+\ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+ \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+  \ \_\   \ \_\  \ \____/  \ \_\       
+   \/_/    \/_/   \/___/    \/_/       
+
+v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : https://sorcery.htb
+ :: Wordlist         : FUZZ: /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+ :: Header           : Host: FUZZ.sorcery.htb
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200
+________________________________________________
+
+… (rest of ffuf output)
+</pre>
+
+</span></code></pre>
 
 
 
