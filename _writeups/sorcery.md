@@ -17,16 +17,14 @@ Enumerate virtual hosts with `ffuf`:
 
 <pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffd700">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200
 
-<h2>ffuf scan results</h2>
-<pre>
-/'___\  /'___\           /'___\       
-/\ \__/ /\ \__/  __  __  /\ \__/       
-\ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
- \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
-  \ \_\   \ \_\  \ \____/  \ \_\       
-   \/_/    \/_/   \/___/    \/_/       
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
 
-v2.1.0-dev
+       v2.1.0-dev
 ________________________________________________
 
  :: Method           : GET
@@ -40,8 +38,8 @@ ________________________________________________
  :: Matcher          : Response status: 200
 ________________________________________________
 
-… (rest of ffuf output)
-</pre>
+:: Progress: [28/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: :: Progress: [40/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: :: Progress: [80/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: :: Progress: [162/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :::: Progress: [246/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :::: Progress: [325/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] ::==git                     [Status: 200, Size: 13591, Words: 1048, Lines: 272, Duration: 123ms]==
+:: Progress: [340/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :::: Progress: [410/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :::: Progress: [490/4989] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] ::
 
 </span></code></pre>
 
